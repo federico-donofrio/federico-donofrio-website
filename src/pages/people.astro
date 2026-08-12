@@ -1,0 +1,87 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/global.css";
+import { currentPeople, formerPeople } from "../data/people.js";
+---
+
+<MainLayout title="People — Federico D'Onofrio">
+
+  <h1>People</h1>
+
+  <section>
+    <h2 class="section-title">Current</h2>
+
+    <h3>PhD students</h3>
+
+    {currentPeople.phdStudents.map((person) => (
+      <article class="person">
+        <h4>{person.name}</h4>
+
+        <p>
+          <strong>University:</strong>
+          {person.affiliation}
+        </p>
+
+        <p>
+          <strong>Dissertation:</strong>
+          <em>{person.dissertation}</em>
+        </p>
+
+        {person.supervisors.length > 0 && (
+          <p>
+            <strong>Supervisors:</strong>
+            {person.supervisors.join(", ")}
+          </p>
+        )}
+      </article>
+    ))}
+
+
+    <h3>Research assistants</h3>
+
+    {currentPeople.researchAssistants.map((person) => (
+      <article class="person">
+        <h4>{person.name}</h4>
+      </article>
+    ))}
+  </section>
+
+
+  <section>
+    <h2 class="section-title">Former</h2>
+
+    <h3>Post-docs</h3>
+
+    {formerPeople.postdocs.map((person) => (
+      <article class="person" id={person.name.toLowerCase().replaceAll(" ", "-")}>
+        <h4>{person.name}</h4>
+
+        {person.outputs.length > 0 && (
+          <>
+            <p><strong>Output</strong></p>
+
+            <ul class="outputs">
+              {person.outputs.map((output) => (
+                <li>
+                  {output.authors && `${output.authors}, `}
+                  <em>{output.title}</em>
+                  {output.status && ` — ${output.status}`}
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </article>
+    ))}
+
+
+    <h3>Research assistants</h3>
+
+    {formerPeople.researchAssistants.map((person) => (
+      <article class="person" id={person.name.toLowerCase().replaceAll(" ", "-")}>
+        <h4>{person.name}</h4>
+      </article>
+    ))}
+  </section>
+
+</MainLayout>

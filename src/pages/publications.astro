@@ -1,0 +1,80 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/global.css";
+import { publications, pipeline } from "../data/publications.js";
+---
+
+<MainLayout title="Publications — Federico D'Onofrio">
+
+  <h1>Publications</h1>
+
+  <section>
+    <h2 class="section-title">Books and edited volumes</h2>
+
+    {publications.books.map((publication) => (
+      <article class="publication">
+        <div class="publication-year">{publication.year}</div>
+        <div class="publication-text">
+          <div>
+            {publication.authors} <em>{publication.title}</em>
+            {publication.link && <a href={publication.link}>[--&gt;]</a>}
+          </div>
+          <div class="publication-details">{publication.details}</div>
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <section>
+    <h2 class="section-title">Articles</h2>
+
+    {publications.articles.map((publication) => (
+      <article class="publication">
+        <div class="publication-year">{publication.year}</div>
+        <div class="publication-text">
+          <div>
+            {publication.authors} “{publication.title}”
+            {publication.link && <a href={publication.link}>[--&gt;]</a>}
+          </div>
+          <div class="publication-details">{publication.details}</div>
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <section>
+    <h2 class="section-title">Chapters and other contributions</h2>
+
+    {publications.chapters.map((publication) => (
+      <article class="publication">
+        <div class="publication-year">{publication.year}</div>
+        <div class="publication-text">
+          <div>
+            {publication.authors} “{publication.title}”
+            {publication.link && <a href={publication.link}>[--&gt;]</a>}
+          </div>
+          <div class="publication-details">{publication.details}</div>
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <section>
+    <h2 class="section-title">Forthcoming and work in progress</h2>
+
+    {pipeline.map((publication) => (
+      <article class="pipeline-entry">
+        <div>
+          {publication.authors && `${publication.authors} `}
+          “{publication.title}”
+          {publication.link && <a href={publication.link}>[--&gt;]</a>}
+        </div>
+
+        {publication.status && (
+          <div class="publication-details">{publication.status}</div>
+        )}
+      </article>
+    ))}
+  </section>
+
+</MainLayout>
