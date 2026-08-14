@@ -1,6 +1,16 @@
 ---
+// existing imports
 import MainLayout from "../layouts/MainLayout.astro";
 import "../styles/global.css";
+
+// helper to build hrefs for local files (prefixes BASE_URL and encodes)
+const siteBase = import.meta.env.BASE_URL ?? "/";
+const mkHref = (p) => {
+  if (!p) return p;
+  if (p.match(/^https?:\/\//)) return p;
+  const cleaned = p.replace(/^\/+/, ""); // remove leading slash if any
+  return `${siteBase}${encodeURI(cleaned)}`;
+};
 ---
 
 <MainLayout title="Research — Federico D'Onofrio">
@@ -125,7 +135,7 @@ import "../styles/global.css";
       construction of expertise</strong>: how particular individuals and
       professional communities acquired authority, how their knowledge was
       established and circulated, and how expertise came to play a role in
-      agricultural policy <a href="/papers\rise-of-agricultural-economics.pdf" target="_blank">  [--&gt;]</a>.
+      agricultural policy  <a href={mkHref("papers/rise-of-agricultural-economics.pdf")} target="_blank" rel="noopener noreferrer">[-->]</a>.
     </p>
 
     <p>
@@ -137,7 +147,7 @@ import "../styles/global.css";
       <a href="/people#myriam-lichani">[--&gt;]</a>
       and Filippo Soramel
       <a href="/people#filippo-soramel">[--&gt;]</a>.
-      <a href="/conferences/datarev-workshop_two centuries of agricultural futures.pdf" target="_blank"> Conference programme and poster [--&gt;]</a>
+      <a href={mkHref("conferences/datarev-workshop_two-centuries-of-agricultural-futures.pdf")} target="_blank" rel="noopener noreferrer"> Conference programme and poster [-->]</a>
     </p>
   </section>
 
@@ -183,8 +193,7 @@ import "../styles/global.css";
       This research is developed further in
       <em> Economics and the Antiquarian: What is an Economic Fact in the
       18th Century?</em>
-      <a href="/papers/ESHET-2026-paper.pdf" target="_blank">
-      [--&gt;]</a>,
+      <a href={mkHref("papers/ESHET-2026-paper.pdf")} target="_blank" rel="noopener noreferrer">[-->]</a>,
       a paper presented at the HES-ESHET conference in Nice in 2026 and
       during my visiting professorship at EHESS.
     </p>
