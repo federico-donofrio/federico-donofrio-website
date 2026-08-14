@@ -3,17 +3,13 @@ import MainLayout from "../layouts/MainLayout.astro";
 import "../styles/global.css";
 
 // helper to build stable hrefs for local files
-const DEFAULT_BASE = "/federico-donofrio-website/";
-const siteBase =
-  import.meta.env.BASE_URL && import.meta.env.BASE_URL !== "/"
-    ? import.meta.env.BASE_URL
-    : DEFAULT_BASE;
-
 const mkHref = (p) => {
   if (!p) return p;
-  if (/^https?:\/\//.test(p)) return p;          // leave external links alone
-  const cleaned = p.replace(/^\/+/, "");         // remove any leading slash
-  return `${siteBase}${encodeURI(cleaned)}`;     // prefix base and encode spaces
+  if (/^https?:\/\//.test(p)) return p;
+
+  const cleaned = p.replace(/^\/+/, "");
+
+  return `${import.meta.env.BASE_URL}${encodeURI(cleaned)}`;
 };
 ---
 <MainLayout title="Research — Federico D'Onofrio">
@@ -147,9 +143,9 @@ const mkHref = (p) => {
       of Agricultural Policy-Making in Europe from the 1760s to the 1960s </strong>
       in Bologna, together with
       Myriam Lichani
-      <a href="/people#myriam-lichani">[--&gt;]</a>
+      <a href={mkHref("people#myriam-lichani")}>[--&gt;]</a>
       and Filippo Soramel
-      <a href="/people#filippo-soramel">[--&gt;]</a>.
+      <a href={mkHref("people#filippo-soramel")}>[--&gt;]</a>.
       <a href={mkHref("conferences/datarev-workshop_two-centuries-of-agricultural-futures.pdf")} target="_blank" rel="noopener noreferrer"> Conference programme and poster [-->]</a>
     </p>
   </section>
@@ -239,7 +235,7 @@ const mkHref = (p) => {
         “Coup d’Oeil: An early-modern concept to understand
         decision-making”
       </em>
-      <a href="/coup-doeil">[--&gt;]</a>
+      <a href={mkHref("coup-doeil")}>[--&gt;]</a>
       — presented at the 2019 conference of the British Society for the
       History of Science in York and at
       <em> Dancing diagrams, numbers, and other things</em> workshop in Lausanne in 2024.
