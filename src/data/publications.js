@@ -163,6 +163,14 @@ export const publications = {
       link: ""
     },
     {
+     year: 2015,
+     authors: "D’Onofrio, F.",
+     title: "Полезная история: о трехуровневой философии истории Антонио Дженовези",
+     details:
+     "Альманах Центра исследований экономической культуры факультета свободных искусств и наук СПбГУ, специальный выпуск «Экономика и религия», pp. 81–96.",
+     link: ""
+    },
+    {
       year: 2013,
       authors: "D’Onofrio, F.",
       title: "Les statistiques agricoles de l’Italie libérale et les porteurs d’intérêts (1907–1929)",
