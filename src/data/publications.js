@@ -111,6 +111,22 @@ export const publications = {
   ],
 
   chapters: [
+  {
+    year: "forthcoming",
+    authors: "D’Onofrio, F.",
+    title: "Agriculture",
+    details:
+      "In Storli, E., Dungy, M. and Gerrard, A. (eds), The Routledge Handbook for the Economic History of Natural Resources, London: Routledge.",
+    link: ""
+  },
+  {
+    year: 2026,
+    authors: "D’Onofrio, F.",
+    title: "Agricultural experts and the rise of agricultural economics in Italy",
+    details:
+      "In Planas, J. and Segers, Y. (eds), Agricultural Modernisation in Europe, 1880–1980: The Role of Experts, Woodbridge: Boydell & Brewer.",
+    link: ""
+  },
     {
       year: 2026,
       authors: "D’Onofrio, F.",
