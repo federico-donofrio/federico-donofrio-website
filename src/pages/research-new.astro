@@ -1,0 +1,374 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/global.css";
+
+const mkHref = (p) => {
+  if (!p) return p;
+  if (/^https?:\/\//.test(p)) return p;
+
+  const cleaned = p.replace(/^\/+/, "");
+
+  return `${import.meta.env.BASE_URL}${encodeURI(cleaned)}`;
+};
+---
+
+<MainLayout title="Research — Federico D'Onofrio">
+
+  <h1>Research</h1>
+
+  <div class="research-intro">
+
+    <p>
+      My research combines intellectual history, the history of economics,
+      and social history. It borders Science and Technology Studies and the
+      history of science. The common thread is an interest in
+      <strong> policy action and collective decision-making</strong>: how
+      collective actors come to understand a situation, define what ought
+      to be done, and act upon it.
+    </p>
+
+    <p>
+      Collective decision-making is not simply the spontaneous aggregation
+      of individual choices, but a process that requires forms of knowledge,
+      authority, and judgement. While the literature has so far underlined
+      the importance of models and other forms of representation as part of
+      the "art of world-making", my principal concern is somewhat different:
+      <strong> how information, expertise and values are brought together
+      in processes of collective decision-making and policy action.</strong>
+    </p>
+
+    <p>
+      So far, my research has investigated the production and use of
+      information in 20th century European agriculture and in 18th century
+      political economy, but it is now expanding to other areas and topics
+      (European industrial policy, and the investigation of backwardness).
+    </p>
+
+  </div>
+
+
+  <details class="research-section">
+  <summary>Agriculture</summary>
+
+  <div class="research-content">
+
+    <p>
+      My research has focused on the production of knowledge for agricultural
+      policy, and on the different empirical practices, organisations and forms
+      of expertise through which agriculture was made observable. Accountancy
+      data proved central to the data revolution that transformed agriculture
+      since the early 20th century, which was engineered and carried out by
+      experts and farmers' organizations.
+    </p>
+
+    <div class="research-dossier">
+      <h3>Observing agriculture</h3>
+
+      <p class="research-label">Publications</p>
+
+      <div class="research-publications">
+
+        <p>
+          D’Onofrio, F. (2016),
+          <em>Observing Agriculture in Early Twentieth-Century Italy:
+          Agricultural Economists and Statistics</em>
+          <a href="https://www.routledge.com/Observing-Agriculture-in-Early-Twentieth-Century-Italy-Agricultural-economists-and-statistics/DOnofrio/p/book/9781032402482">[--&gt;]</a>.
+        </p>
+
+        <p>
+          D’Onofrio, F. (2012),
+          “Making variety simple: agricultural economists in Southern Italy,
+          1907–1909”, <em>History of Political Economy</em>, 44, pp. 93–113.
+        </p>
+
+        <p>
+          D’Onofrio, F. (2013),
+          “Les statistiques agricoles de l’Italie libérale et les porteurs
+          d’intérêts (1907–1929)”, in Fraboulet, D., Druelle-Korn, C. and
+          Vernus, P. (eds),
+          <em>Les organisations patronales et la sphère publique.
+          Europe XIXe et XXe siècles</em>, Rennes: PUR, pp. 143–152.
+        </p>
+
+        <p>
+          D’Onofrio, F. and Tyler, H. (2022),
+          “Wolf Ladejinsky: Field Trips for a Democratic Countryside”,
+          <em>History of Political Economy</em>, 54(3), pp. 459–481
+          <a href="https://doi.org/10.1215/00182702-9779614">[--&gt;]</a>.
+        </p>
+
+      </div>
+    </div>
+
+
+    <div class="research-dossier">
+      <h3>Farm accountancy data</h3>
+
+      <p class="research-label">Projects</p>
+
+      <p>
+        FARMACCOUNTA
+        <a href={mkHref("farmaccounta")}>[--&gt;]</a>
+      </p>
+
+      <p>
+        DATAREV
+        <a href="https://datarev.univie.ac.at/">[--&gt;]</a>
+      </p>
+
+      <p class="research-label">People</p>
+
+      <p>
+        Marina Chuchko
+        <a href={mkHref("people#marina-chuchko-kisling")}>[--&gt;]</a>
+      </p>
+
+      <p>
+        Myriam Lichani
+        <a href={mkHref("people#myriam-lichani")}>[--&gt;]</a>
+      </p>
+
+      <p class="research-label">Publications</p>
+
+      <div class="research-publications">
+
+        <p>
+          D’Onofrio, F. (2025),
+          “The intentional spread of farm accountancy offices in Europe
+          1870–1950”, in Joly, N. and D’Onofrio, F. (eds),
+          <em>The Invention of the Accounting Farmer</em>,
+          Woodbridge: Boydell & Brewer.
+        </p>
+
+        <p>
+          Joly, N. and D’Onofrio, F. (eds) (2025),
+          <em>The Invention of the Accounting Farmer</em>,
+          Woodbridge: Boydell & Brewer.
+        </p>
+
+        <p>
+          D’Onofrio, F.,
+          “The experience of value and the value of experience:
+          land valuation in the 19th and 20th century”,
+          submitted to <em>Science in Context</em>.
+        </p>
+
+        <p>
+          D’Onofrio, F. and Chuchko, M.,
+          “The evolution of representativeness criteria in agricultural
+          economics: the case of farm accountancy data”.
+        </p>
+
+      </div>
+    </div>
+
+
+    <div class="research-dossier">
+      <h3>International agricultural statistics and organisations</h3>
+
+      <p class="research-label">Publications</p>
+
+      <div class="research-publications">
+
+        <p>
+          D’Onofrio, F. (2026),
+          “From the International Institute of Agriculture to the Food and
+          Agriculture Organisation”, in Cabo, M., Fernández Prieto, L. and
+          Pan-Montojo, J. (eds),
+          <em>From rural modernities to agricultural modernisation.
+          Technologies and discourses on progress in the 20th century</em>,
+          Woodbridge: Boydell & Brewer, pp. 101–118.
+        </p>
+
+        <p>
+          D’Onofrio, F. (2017),
+          “Agricultural numbers: the statistics of the International Institute
+          of Agriculture in the Interwar period”,
+          <em>Agricultural History Review</em>, 65(2), pp. 277–296.
+        </p>
+
+        <p>
+          D’Onofrio, F. and Mignemi, N. (2025),
+          “The making of perfect markets: Agriculture and international
+          statistics in the early 20th century”,
+          <em>Journal of World History</em>, 36(3), pp. 409–439
+          <a href="https://doi.org/10.1353/jwh.2025.a974184">[--&gt;]</a>.
+        </p>
+
+        <p>
+          D’Onofrio, F. and Mignemi, N. (2023),
+          “The International Institute of Agriculture and the information
+          infrastructure of world trade (1905–1947)”,
+          <em>Histoire et Mesure</em>, 38(1), pp. 13–38
+          <a href="https://doi.org/10.4000/histoiremesure.19003">[--&gt;]</a>.
+        </p>
+
+      </div>
+    </div>
+
+
+    <div class="research-dossier">
+      <h3>Agricultural experts</h3>
+
+      <p class="research-label">Publications</p>
+
+      <div class="research-publications">
+
+        <p>
+          D’Onofrio, F. (forthcoming),
+          “Agricultural experts and the rise of agricultural economics in
+          Italy”, in Planas, J. and Segers, Y. (eds),
+          <em>Agricultural Modernisation in Europe, 1880–1980:
+          The Role of Experts</em>, Woodbridge: Boydell & Brewer.
+        </p>
+
+        <p>
+          D’Onofrio, F. (2017),
+          “Micro-foundations of Italian agrarianism: Italian agricultural
+          economists and fascism”,
+          <em>Agricultural History</em>, 92(3), pp. 369–396.
+        </p>
+
+      </div>
+
+      <p class="research-label">Blog post</p>
+
+      <p>
+        <em>The margins of the field: rediscovering agricultural economists
+        for the history of ideas</em>
+        <a href="https://www.jhiblog.org/2025/12/15/the-margins-of-the-field-rediscovering-agricultural-economists-for-the-history-of-ideas/">[--&gt;]</a>
+      </p>
+
+      <p class="research-label">Conference</p>
+
+      <p>
+        <em>Two Centuries of Agricultural Futures: Actors and Networks of
+        Agricultural Policy-Making in Europe from the 1760s to the 1960s</em>,
+        Bologna, July 2026, co-organised with
+        Myriam Lichani
+        <a href={mkHref("people#myriam-lichani")}>[--&gt;]</a>
+        and Filippo Soramel
+        <a href={mkHref("people#filippo-soramel")}>[--&gt;]</a>.
+        <a href={mkHref("conferences/datarev-workshop_two-centuries-of-agricultural-futures.pdf")}
+           target="_blank"
+           rel="noopener noreferrer">[--&gt;]</a>
+      </p>
+
+    </div>
+
+  </div>
+</details>
+
+
+  <details class="research-section">
+    <summary>The rise of political economy</summary>
+
+    <div class="research-content">
+
+      <p>
+        At the origins of political economy, in the eighteenth century, lies
+        a concrete concern with <strong>government action</strong>. The
+        Neapolitan tradition of <em>Economia civile</em> articulated this
+        concern in terms of <em>felicitas publica</em>
+        <a href="https://doi.org/10.1017/S1053837215000401">[--&gt;]</a>
+        and of the
+        <strong>functions of government</strong>
+        <a href="https://www.francoangeli.it/rivista/getArticoloFree/62420/En">[--&gt;]</a>.
+      </p>
+
+      <p>
+        Policy action, in this context, depended on the construction of an
+        <strong> information space</strong> that was complex and articulated.
+        My research on the administrative culture of Ancien Régime Naples has
+        examined the conflicts surrounding the production, circulation and
+        authority of information, particularly in relation to grain policy,
+        in <em>Numeri falsi e numeri errati: le basi informative della
+        politica granaria a Napoli nella seconda metà del secolo XVIII</em>
+        <a href="https://cris.unibo.it/handle/11585/1031705">[--&gt;]</a>.
+      </p>
+
+      <p>
+        My current research takes this question further by investigating the
+        emergence, in the eighteenth century, of a distinctive attitude
+        towards <strong>facts</strong>. Much of the existing literature has
+        explored the relationship between political economy and the natural
+        sciences, particularly Newtonian physics. My research instead explores
+        the connections between economic knowledge and the
+        <strong> antiquarian and philological traditions</strong>, asking how
+        these traditions contributed to the emergence of what could count as
+        an economic fact
+        <a href={mkHref("papers/ESHET-2026-paper.pdf")}
+           target="_blank"
+           rel="noopener noreferrer">[--&gt;]</a>.
+      </p>
+
+    </div>
+  </details>
+
+
+  <details class="research-section">
+    <summary>European industrial policy</summary>
+
+    <div class="research-content">
+
+      <p>
+        Most work on the economic constitution of European institutions has
+        focused on the creation of the <strong>Common Market and Single
+        Market</strong>, and on the <strong>Economic and Monetary Union</strong>.
+        My new research takes a different approach by examining more closely
+        the developmental ambitions of European institutions and the ways in
+        which they sought to shape investment and economic transformation.
+      </p>
+
+      <p>
+        I am particularly interested in the <strong>investment priorities </strong>
+        identified by European organisations: first through the activities of
+        the <strong>European Investment Bank</strong>, and subsequently through
+        initiatives such as the Trans-European Transport Network (TEN-T) and
+        European regional policies.
+      </p>
+
+    </div>
+  </details>
+
+
+  <details class="research-section">
+    <summary><em>Coup d'œil</em></summary>
+
+    <div class="research-content">
+
+      <p>
+        I am also investigating the early-modern concept of
+        <em>coup d'œil</em> as a way of understanding decision-making and
+        practical judgement
+        <a href={mkHref("coup-doeil")}>[--&gt;]</a>.
+      </p>
+
+    </div>
+  </details>
+
+
+  <details class="research-section">
+    <summary>Backwardness</summary>
+
+    <div class="research-content">
+
+      <p>
+        I plan a new project on the history of
+        <strong>backwardness</strong>: how the modern concept emerged and
+        became an object of policy intervention. Critical approaches to
+        development studies have traditionally understood backwardness as the
+        result of a foreign gaze upon an organic community, whether a village
+        or a nation. My research instead explores how metrics of progress and
+        backwardness may be constructed <strong>within the community
+        itself</strong>, and how they can support strategies of catching up
+        through reform, emulation and adaptation. Backwardness thus becomes
+        not simply an external judgement, but an element in the political
+        strategies of historical actors themselves.
+      </p>
+
+    </div>
+  </details>
+
+
+</MainLayout>

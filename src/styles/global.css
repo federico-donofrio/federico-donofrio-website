@@ -207,3 +207,72 @@ main h3 {
 .outputs li {
   margin-bottom: 0.7rem;
 }
+/* Research filing cabinet */
+
+.research-section {
+  margin: 0.35rem 0;
+  border-left: 2px solid transparent;
+}
+
+.research-section summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.65rem 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+}
+
+.research-section summary::-webkit-details-marker {
+  display: none;
+}
+
+.research-section summary::before {
+  content: "▸";
+  font-size: 0.9em;
+  transition: transform 0.15s ease;
+}
+
+.research-section[open] summary::before {
+  content: "▾";
+}
+
+.research-section[open] {
+  border-left-color: var(--line);
+}
+
+.research-content {
+  margin-left: 1.55rem;
+  padding: 0.4rem 0 1.8rem 1rem;
+}
+
+.research-content p:last-child {
+  margin-bottom: 0;
+}
+
+.research-section summary:hover {
+  background: rgba(0, 0, 0, 0.025);
+}
+.research-dossier {
+  margin: 2.5rem 0 0 1.75rem;
+}
+
+.research-dossier h3 {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.research-label {
+  margin: 1.25rem 0 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.research-publications p {
+  margin: 0.75rem 0;
+}
